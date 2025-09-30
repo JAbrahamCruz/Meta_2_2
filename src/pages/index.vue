@@ -1,13 +1,20 @@
 <template>
-  <v-container class="fill-height d-flex flex-column justify-center align-center text-center">
-    <h1 class="text-h2 font-weight-bold mb-6">Bienvenido a mi Landing 🚀</h1>
-    <p class="text-subtitle-1 mb-8">Un texto breve que explique de qué va tu proyecto.</p>
-    <v-btn @click="theme.toggle()" text="Toggle Light / Dark"></v-btn>
+  <v-container min-height="85vh" class="h-auto d-flex align-center justify-center flex-column ga-3">
+
+    <v-container class="d-flex align-center flex-wrap justify-center ga-16">
+      <Card></Card>
+      <Card></Card>
+    </v-container>
+    <Table></Table>
+    <v-btn color="success">text</v-btn>
   </v-container>
 </template>
 
 <script setup>
-import { useTheme } from 'vuetify'
-
-const theme = useTheme()
+import Card from "@/components/Card.vue"
+import Table from "@/components/Table.vue"
 </script>
+
+<style scoped>
+
+</style>
